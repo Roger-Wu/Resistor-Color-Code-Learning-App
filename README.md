@@ -23,3 +23,6 @@
   * [react-toolbox](https://github.com/react-toolbox/react-toolbox)
   * mdl
   * materialize
+
+* haven't remove material ui
+* meteor npm install material-design-lite --save
