@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'material-design-lite';
 
 import MyAppBar from './MyAppBar.jsx';
 
