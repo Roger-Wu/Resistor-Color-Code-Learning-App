@@ -10,6 +10,10 @@
 * meteor npm install --save react-router
 * meteor add accounts-facebook accounts-ui
 
+## Done Features
+* material ui
+* facebook login
+
 ## Problems
 * accounts ui style
   * use useraccounts
