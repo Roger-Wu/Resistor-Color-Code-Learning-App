@@ -5,9 +5,9 @@ export default class HomePage extends Component {
     return (
       <div>
         {[
-          <div>1</div>,
-          <div>2</div>,
-          <div>3</div>
+          <div key="1">1</div>,
+          <div key="2">2</div>,
+          <div key="3">3</div>
         ]}
       </div>
     );

@@ -25,4 +25,11 @@
   * materialize
 
 * haven't remove material ui
-* meteor npm install material-design-lite --save
+
+* meteor npm install --save react-toolbox
+
+* meteor add nathantreid:css-modules@2.0.2
+* meteor npm install --save-dev node-sass
+
+* meteor remove nathantreid:css-modules@2.0.2
+* meteor npm uninstall --save-dev node-sass

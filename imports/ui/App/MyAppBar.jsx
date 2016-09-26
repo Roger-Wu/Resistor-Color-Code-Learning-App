@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { Button } from 'react-toolbox/lib/button/Button.js';
+import { Card } from 'react-toolbox/lib/card';
 
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 export default class MyAppBar extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
+    // console.log(this.props);
   }
 
   render() {
@@ -32,6 +34,9 @@ export default class MyAppBar extends Component {
         <Link to="/">Home</Link>
         <Link to="/learn">Learn</Link>
         <Link to="/train">Train</Link>
+        <Button label="Hello World!" />
+        <Button className="a">123</Button>
+        <Card>123</Card>
       </div>
     );
   }
