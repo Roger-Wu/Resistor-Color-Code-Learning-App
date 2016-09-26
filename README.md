@@ -10,6 +10,8 @@
 * meteor npm install --save react-router
 * meteor add accounts-facebook accounts-ui
 
+* meteor npm install babel-plugin-transform-class-properties
+
 ## Done Features
 * material ui
 * facebook login
