@@ -3,6 +3,8 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import Resistor from './Resistor.jsx';
+
 export default class ResistorGame extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +13,7 @@ export default class ResistorGame extends Component {
   getProblem() {
     return {
       _id: 1,
-      statement: "problem description 1",
+      statement: [2, 2, 3, 10],
       options: ["10k", "22k", "81k", "87k"],
       answerIdx: 1,
     };
@@ -30,44 +32,39 @@ class ResistorProblem extends Component {
   render() {
     const { problem } = this.props;
 
-    const containerStyle = {
-      maxWidth: 600,
-      margin: "0 auto",
-      padding: 12,
-    };
-    const statementStyle = {
-      fontSize: "2rem",
-    };
-    const optionStyle = {
-      display: "block",
-      margin: "12px auto 0",
-      width: 300,
-      height: 56,
-      // lineHeight: "2rem",
-      // fontSize: "2rem",
-    };
-    const optionTextStyle = {
-      // lineHeight: "2rem",
-      fontSize: 24,
-      // height: "2rem",
+    const style = {
+      container: {
+        maxWidth: 600,
+        margin: "0 auto",
+        padding: 12,
+      },
+      option: {
+        display: "block",
+        margin: "12px auto 0",
+        width: 300,
+        height: 56,
+      },
+      optionText: {
+        fontSize: 24,
+      }
     }
 
     return (
       <Paper
         key={problem._id}
-        style={containerStyle}
+        style={style.container}
         zDepth={1}
       >
-        <div>{problem.statement}</div>
+        <Resistor codes={problem.statement} />
         {
           problem.options.map((option, index) => {
             return (
               <RaisedButton
                 key={option}
                 label={option}
-                labelStyle={optionTextStyle}
+                labelStyle={style.optionText}
                 secondary={true}
-                style={optionStyle}
+                style={style.option}
               />
             );
           })
