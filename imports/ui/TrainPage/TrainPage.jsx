@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import ResistorGame from './ResistorGame.jsx';
 
-export default class TrainPageContainer extends Component {
+export default class TrainPage extends Component {
   render() {
     return (
-      <div>Train Page</div>
+      <div id="train-page">
+        <ResistorGame/>
+      </div>
     );
   }
 }
