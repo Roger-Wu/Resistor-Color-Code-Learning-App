@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 // route components
-import App from '../../ui/App/App.jsx';
-import HomePage from '../../ui/HomePage/HomePage.jsx';
-import LearnPage from '../../ui/LearnPage/LearnPage.jsx';
-import GamePage from '../../ui/GamePage/GamePage.jsx';
-import ColorGamePage from '../../ui/GamePage/ColorGamePage/ColorGamePage.jsx';
-import ResistorGamePage from '../../ui/GamePage/ResistorGamePage/ResistorGamePage.jsx';
-import NotFoundPage from '../../ui/NotFoundPage/NotFoundPage.jsx';
+import App from '/imports/ui/App/App.jsx';
+import HomePage from '/imports/ui/HomePage/HomePage.jsx';
+import LearnPage from '/imports/ui/LearnPage/LearnPage.jsx';
+import GamePage from '/imports/ui/GamePage/GamePage.jsx';
+import ColorGamePage from '/imports/ui/GamePage/ColorGamePage/ColorGamePage.jsx';
+import ResistorGamePage from '/imports/ui/GamePage/ResistorGamePage/ResistorGamePage.jsx';
+import NotFoundPage from '/imports/ui/NotFoundPage/NotFoundPage.jsx';
 
 export const renderRoutes = () => {
   const navbarItems = [
