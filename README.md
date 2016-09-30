@@ -49,5 +49,5 @@
         ]
       }
       ```
-    * Testart meteor. Done!
+    * Restart meteor. Done!
 *
