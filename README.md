@@ -29,3 +29,5 @@
   * [react-toolbox](https://github.com/react-toolbox/react-toolbox)
   * mdl
   * materialize
+* Missing class properties transform.
+  * babel-plugin-transform-class-properties

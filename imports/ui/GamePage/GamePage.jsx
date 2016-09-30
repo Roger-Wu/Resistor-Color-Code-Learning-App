@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import ResistorGame from './ResistorGame.jsx';
 
-export default class TrainPage extends Component {
+export default class GamePage extends Component {
   render() {
     return (
-      <div id="train-page">
-        <ResistorGame/>
+      <div id="game-page">
       </div>
     );
   }

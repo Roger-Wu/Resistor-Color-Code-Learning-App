@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import {Tabs, Tab} from 'material-ui/Tabs';
@@ -13,7 +13,6 @@ import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 export default class MyAppBar extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
 
     this.state = {
       open: false,
@@ -32,29 +31,6 @@ export default class MyAppBar extends Component {
   }
 
   render() {
-    const routes = [
-      {name: "Home", path: "/"},
-      {name: "Learn", path: "/learn"},
-      {name: "Train", path: "/train"},
-    ];
-    //
-    // const tabs = (
-    //   <Tabs style={styles.tabs} value={this.props.location.pathname}>
-    //     <Tab label="Home" value="/" containerElement={<Link to="/"/>}></Tab>
-    //     <Tab label="Learn" value="/learn" containerElement={<Link to="/learn"/>}></Tab>
-    //     <Tab label="Train" value="/train" containerElement={<Link to="/train"/>}></Tab>
-    //   </Tabs>
-    // );
-    // const buttons = (
-    //   <div>
-    //     <FlatButton
-    //       label="Learn"
-    //       containerElement={<Link to="/learn"/>}
-    //     />
-    //     <FlatButton label="Train" containerElement={<Link to="/train"/>} />
-    //   </div>
-    // );
-
     return (
       <div>
         <AppBar
@@ -70,7 +46,7 @@ export default class MyAppBar extends Component {
           docked={false}
           onRequestChange={(open) => this.setState({open})}
         >
-          { routes.map((route) => {
+          { this.props.navbarItems.map((route) => {
             return (
               <MenuItem
                 key={route.path}
@@ -85,3 +61,7 @@ export default class MyAppBar extends Component {
     );
   }
 }
+
+MyAppBar.propTypes = {
+  navbarItems: PropTypes.array.isRequired,
+};

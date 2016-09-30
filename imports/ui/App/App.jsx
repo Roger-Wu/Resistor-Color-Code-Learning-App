@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-// import Test from './Test.jsx';
 import MyAppBar from './MyAppBar.jsx';
 
-export default class AppContainer extends Component {
-  constructor(props) {
-    super(props);
-    console.log('App');
-    console.log(props);
-  }
+export default class App extends Component {
+  // TODO: delete debug code
+  // constructor(props) {
+  //   super(props);
+  //   console.log('App');
+  //   console.log(props);
+  // }
 
   render() {
     return (
       <MuiThemeProvider>
         <div className="app-container">
-          <MyAppBar location={this.props.location} />
+          <MyAppBar navbarItems={this.props.route.navbarItems} />
           {this.props.children}
         </div>
       </MuiThemeProvider>
@@ -23,6 +23,6 @@ export default class AppContainer extends Component {
   }
 }
 
-AppContainer.propTypes = {
-  children: React.PropTypes.object,
+App.propTypes = {
+  children: PropTypes.object,
 };
