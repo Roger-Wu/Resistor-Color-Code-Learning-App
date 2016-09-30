@@ -17,16 +17,13 @@ export default class MyAppBar extends Component {
     this.state = {
       open: false,
     };
-
-    this.handleToggle = this.handleToggle.bind(this);
-    this.handleClose = this.handleClose.bind(this);
   }
 
-  handleToggle() {
+  handleToggle = () => {
     this.setState({open: !this.state.open});
   }
 
-  handleClose() {
+  handleClose = () => {
     this.setState({open: false});
   }
 

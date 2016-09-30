@@ -30,4 +30,25 @@
   * mdl
   * materialize
 * Missing class properties transform.
-  * babel-plugin-transform-class-properties
+  * to use
+
+    ```js
+    handleToggle = () => { ...; }
+    ```
+
+    you need the babel-plugin "transform-class-properties"
+
+  * How to config babel. (To use "transform-class-properties")
+    * add ".babelrc" file in root of project folder
+    * edit the file to
+
+      ```js
+      {
+        "plugins": [
+          "transform-class-properties"
+        ]
+      }
+      ```
+    * Testart meteor. Done!
+
+* 
