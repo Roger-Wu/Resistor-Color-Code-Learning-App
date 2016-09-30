@@ -1,0 +1,87 @@
+$resistor-black: black;
+$resistor-brown: #8B4513;
+$resistor-red: red;
+$resistor-orange: orange;
+$resistor-yellow: yellow;
+$resistor-green: green;
+$resistor-blue: blue;
+$resistor-violet: #8d38c9;
+$resistor-gray: #c0c0c0;
+$resistor-white: white;
+$resistor-gold: linear-gradient(to bottom, #d39400 0%,#ffff30 30%,#d39400 100%);
+$resistor-silver: linear-gradient(to bottom,  #a0a0a0 0%,#ffffff 30%,#a0a0a0 100%);
+
+$resistor-wire: linear-gradient(to bottom,  #adadad 0%,#ffffff 30%,#404040 80%,#afafaf 100%);
+$resistor-body: #f3d297;
+
+.resistor-ring-black {
+  background-color: $resistor-black;
+}
+
+.resistor-ring-brown {
+  background-color: $resistor-brown;
+}
+
+.resistor-ring-red {
+  background-color: $resistor-red;
+}
+
+.resistor-ring-orange {
+  background-color: $resistor-orange;
+}
+
+.resistor-ring-yellow {
+  background-color: $resistor-yellow;
+}
+
+.resistor-ring-green {
+  background-color: $resistor-green;
+}
+
+.resistor-ring-blue {
+  background-color: $resistor-blue;
+}
+
+.resistor-ring-violet {
+  background-color: $resistor-violet;
+}
+
+.resistor-ring-gray {
+  background-color: $resistor-gray;
+}
+
+.resistor-ring-grey {
+  background-color: $resistor-gray;
+}
+
+.resistor-ring-white {
+  background-color: $resistor-white;
+}
+
+.resistor-ring-gold {
+  background: $resistor-gold;
+}
+
+.resistor-ring-silver {
+  background: $resistor-silver;
+}
+
+.resistor-wire {
+  background: $resistor-wire;
+  position: absolute;
+  left: 0;
+  top: 43.75%;
+  width: 100%;
+  height: 12.5%;
+  z-index: 1,
+}
+
+.resistor-body {
+  background-color: $resistor-body;
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  text-align: center;
+}

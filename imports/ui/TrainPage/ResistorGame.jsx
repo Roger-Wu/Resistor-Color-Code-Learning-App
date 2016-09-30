@@ -34,14 +34,14 @@ class ResistorProblem extends Component {
 
     const style = {
       container: {
-        maxWidth: 600,
+        maxWidth: 400,
         margin: "0 auto",
         padding: 12,
       },
       option: {
         display: "block",
         margin: "12px auto 0",
-        width: 300,
+        width: 240,
         height: 56,
       },
       optionText: {
@@ -55,7 +55,11 @@ class ResistorProblem extends Component {
         style={style.container}
         zDepth={1}
       >
-        <Resistor codes={problem.statement} />
+        <div>Q1</div>
+        <div>Score: 1</div>
+        <div style={{padding: "30px 0"}}>
+          <Resistor codes={problem.statement} />
+        </div>
         {
           problem.options.map((option, index) => {
             return (
