@@ -52,7 +52,7 @@ export default class Resistor extends Component {
               return (
                 <div
                   key={index}
-                  className={"resistor-ring-" + this.codeToColor(code)}
+                  className={"resistor-background-" + this.codeToColor(code)}
                   style={{
                     margin: "0 " + height/8 + "px",
                     height: height,

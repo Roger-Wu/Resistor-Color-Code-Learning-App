@@ -58,7 +58,7 @@ export default class ColorProblem extends Component {
         <div>Score: 1</div>
         <div style={{padding: 20}}>
           <div
-            className={"resistor-ring-" + this.codeToColor(problem.question.code)}
+            className={"resistor-background-" + this.codeToColor(problem.question.code)}
             style={{width: 100, height: 100, margin:"0 auto"}}
           />
         </div>
