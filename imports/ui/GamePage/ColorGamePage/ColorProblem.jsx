@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
 
-export default class ResistorColorGame extends Component {
+// handle one problem
+export default class ColorProblem extends Component {
   constructor(props) {
     super(props);
-  }
-
-  getProblem() {
-    return {
-      _id: 1,
-      statement: {
-        colorCode: 5
-      },
-      options: [4, 5, 6, 7],
-      answerIdx: 1,
+    this.state = {
+      codeToColorDict: {
+        0: "black",
+        1: "brown",
+        2: "red",
+        3: "orange",
+        4: "yellow",
+        5: "green",
+        6: "blue",
+        7: "violet",
+        8: "gray",
+        9: "white",
+        10: "gold",
+        11: "silver",
+      }
     };
   }
 
-  render() {
-    return (
-      <div>
-        <ResistorColorProblem problem={this.getProblem()}/>
-      </div>
-    );
+  codeToColor(code) {
+    return this.state.codeToColorDict[code];
   }
-}
 
-class ResistorColorProblem extends Component {
   render() {
     const { problem } = this.props;
 
@@ -57,8 +56,11 @@ class ResistorColorProblem extends Component {
       >
         <div>Q1</div>
         <div>Score: 1</div>
-        <div style={{padding: "30px 0"}}>
-          <Resistor codes={problem.statement} />
+        <div style={{padding: 20}}>
+          <div
+            className={"resistor-ring-" + this.codeToColor(problem.question.code)}
+            style={{width: 100, height: 100, margin:"0 auto"}}
+          />
         </div>
         {
           problem.options.map((option, index) => {

@@ -7,11 +7,9 @@ export default class Template extends Component {
     this.state = {
       open: false,
     };
-
-    this.myFunc = this.myFunc.bind(this);
   }
 
-  myFunc() {
+  myFunc = () => {
 
   }
 

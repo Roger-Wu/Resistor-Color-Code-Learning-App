@@ -7,7 +7,6 @@ import MenuItem from 'material-ui/MenuItem';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 
-
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
 export default class MyAppBar extends Component {
